@@ -1,0 +1,98 @@
+/* CONTENEDOR GRID */
+.mistarjetas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+
+        "tarjeta1 tarjeta2 tarjeta3"
+        "tarjeta4 tarjeta5 tarjeta5";
+    gap: 20px;
+    
+    max-width: 1200px;
+    margin: 40px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tarjeta1,
+.tarjeta2,
+.tarjeta3,
+.tarjeta4,
+.tarjeta5 {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 1px;
+    
+}
+
+.tarjeta1 {
+    grid-area: tarjeta1;
+    background-image: url('imagenes.css/morado.png');
+    background-size: cover;
+    color: white;
+    height: 250px;
+    width: 950px;
+    
+}
+
+
+.tarjeta2 {
+    grid-area: tarjeta2;
+    background-color: #50596c;
+    color: white;
+    height: 270px;
+    width: 250px;
+   
+}
+
+
+.tarjeta3 {
+ 
+    grid-area: tarjeta3;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+     height: 260px;
+     overflow: auto;
+    width: 280px;
+}
+
+
+.tarjeta4 {
+    grid-area: tarjeta4;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+     height: 250px;
+    width: 250px;
+   
+}
+
+.tarjeta5 {
+    grid-area: tarjeta5;
+    background-color: #19202d;
+    color: white;
+    height: 250px;
+    width: 642px;
+    grid-column: 2/2;
+    
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+    .mistarjetas {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "tarjeta1"
+            "tarjeta2"
+            "tarjeta3"
+            "tarjeta4"
+            "tarjeta5";
+    }
+}
